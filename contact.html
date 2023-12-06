@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>C.C. Contact</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="imgs/w3.css">
+    <style>
+      body {
+        font-family: "Times New Roman", Georgia, Serif;
+        margin: 0;
+        /* Remove default margin to ensure full-width display */
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Playfair Display";
+        letter-spacing: 5px;
+      }
+
+      .navbar {
+        overflow: hidden;
+        background-color: #f1f1f1;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+      }
+
+      .navbar a {
+        float: right;
+        display: block;
+        color: #000;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .navbar {
+          display: none;
+          /* Hide the top navbar on small screens */
+        }
+
+        .content {
+          margin-top: 0;
+        }
+
+        .header h1 {
+          font-size: 6pt;
+          /* Adjust font size for smaller screens */
+        }
+
+        .intro h1 {
+          font-size: 12pt;
+          /* Adjust font size for smaller screens */
+        }
+
+        .intro h5 {
+          font-size: 10pt;
+          /* Adjust font size for smaller screens */
+        }
+
+        .intro h4 {
+          font-size: 10pt;
+          /* Adjust font size for smaller screens */
+        }
+      }
+
+      /* Styles for larger screens */
+      @media only screen and (min-width: 601px) {
+        .navbar a i {
+          font-size: 18px;
+          /* Adjust the font size for icons in the top navbar */
+          margin-right: 5px;
+          /* Add some space between icons */
+        }
+
+        .content {
+          margin-top: 50px;
+          /* Adjust the margin to leave space for the fixed navbar */
+        }
+      }
+      ul {
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="w3-top">
+      <div class="w3-bar" id="myNavbar">
+        <a href="javascript:void(0);" class="w3-bar-item w3-button w3-hover-black w3-right w3-hide-large w3-hide-medium" onclick="toggleFunction()" title="Toggle Navigation Menu">
+          <i class="fa fa-bars"></i>
+        </a>
+        <a href="index.html" class="w3-bar-item w3-button w3-mobile w3-hide-small">
+          <i class="fa-solid fa-home"></i> Home </a>
+        <a href="news.html" class="w3-bar-item w3-button w3-mobile w3-hide-small">
+          <i class="fa-solid fa-newspaper"></i> News </a>
+        <a href="scorecard.html" class="w3-bar-item w3-button w3-mobile w3-hide-small">
+          <i class="fa-solid fa-medal"></i> Scorecard </a>
+        <a href="gear.html" class="w3-bar-item w3-button w3-mobile w3-hide-small">
+          <i class="fa-solid fa-tshirt"></i> Gear </a>
+        <a href="featured.html" class="w3-bar-item w3-button w3-mobile w3-hide-small">
+          <i class="fa-solid fa-star"></i> Featured </a>
+        <a href="contact.html" class="w3-bar-item w3-button w3-mobile w3-hide-small">
+          <i class="fa-solid fa-envelope fa-shake"></i> Contact </a>
+      </div>
+    </div>
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium" style="position: fixed; top: 0; width: 90%; z-index: 1;">
+      <a href="index.html" class="w3-bar-item w3-button w3-mobile">
+        <i class="fa-solid fa-home"></i>
+      </a>
+      <a href="news.html" class="w3-bar-item w3-button w3-mobile">
+        <i class="fa-solid fa-newspaper"></i>
+      </a>
+      <a href="scorecard.html" class="w3-bar-item w3-button w3-mobile">
+        <i class="fa-solid fa-medal"></i>
+      </a>
+      <a href="gear.html" class="w3-bar-item w3-button w3-mobile">
+        <i class="fa-solid fa-tshirt"></i>
+      </a>
+      <a href="featured.html" class="w3-bar-item w3-button w3-mobile">
+        <i class="fa-solid fa-star"></i>
+      </a>
+      <a href="contact.html" class="w3-bar-item w3-button w3-mobile">
+        <i class="fa-solid fa-envelope fa-shake"></i>
+      </a>
+    </div>
+    <!-- Content Section -->
+    <div class="content">
+      <header class="header w3-display-container w3-content w3-center w3-padding-64" style="max-width:1100px; min-width:500px;" id="home">
+        <img class="w3-image w3-border" src="imgs/ballheader.jpg" alt="ball">
+        <div class="w3-padding-64 w3-display-topright w3-margin-right" style="color: rgb(0, 0, 0);">
+          <h1>Clubhouse Chronicles</h1>
+        </div>
+      </header>
+      <div class="header w3-display-container w3-content w3-center" id="contact">
+        <h1>Contact Us - Swing by or Drop a Line</h1>
+        <br>
+        <p>Fore the best golf experience, don't hesitate to get in touch. Whether you're ready to tee off a conversation or provide feedback, we're ready to drive the discussion forward.</p>
+        <p class="w3-text-blue-grey w3-large">
+          <b>Golf Clubhouse, 18th Fairway St, 12345 Golf City</b>
+        </p>
+        <p>For a swift response, feel free to:</p>
+        <ul>
+          <li> Drop us an Eagle-Mail: <a href="mailto:info@clubhouse.com">info@clubhouse.com</a>
+          </li>
+          <li> Ring the Clubhouse Bell: 00555123-4567 (Just don't expect a hole-in-one answer every time!)</li>
+        </ul>
+      </div>
+    </div>
+    <footer class="w3-center w3-light-grey w3-padding-32">
+      <div>
+        <a href="https://twitter.com/" class="w3-hover-text-blue">
+          <i class="fab fa-twitter" style="font-size: 24px;"></i>
+        </a>
+        <a href="https://instagram.com/" class="w3-hover-text-purple">
+          <i class="fab fa-instagram" style="font-size: 24px;"></i>
+        </a>
+        <a href="https://tiktok.com" class="w3-hover-text-red">
+          <i class="fab fa-tiktok" style="font-size: 24px;"></i>
+        </a>
+        <a href="https://facebook.com" class="w3-hover-text-blue">
+          <i class="fab fa-facebook" style="font-size: 24px;"></i>
+        </a>
+      </div>
+    </footer>
+    <script>
+      // Change style of navbar on scroll
+      window.onscroll = function() {
+        myFunction()
+      };
+
+      function myFunction() {
+        var navbar = document.getElementById("myNavbar");
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+          navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+        } else {
+          navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+        }
+      }
+      // Used to toggle the menu on small screens when clicking on the menu button
+      function toggleFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Clubhouse Chronicles - Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="imgs/w3.css">
+    <style>
+      body {
+        font-family: "Times New Roman", Georgia, Serif;
+        margin: 0;
+        /* Remove default margin to ensure full-width display */
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Playfair Display";
+        letter-spacing: 5px;
+      }
+
+      .navbar {
+        overflow: hidden;
+        background-color: #f1f1f1;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+      }
+
+      .navbar a {
+        float: right;
+        display: block;
+        color: #000;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .navbar {
+          display: none;
+          /* Hide the top navbar on small screens */
+        }
+
+        .content {
+          margin-top: 0;
+        }
+
+        .header h1 {
+          font-size: 6pt;
+          /* Adjust font size for smaller screens */
+        }
+
+        .intro h1 {
+          font-size: 12pt;
+          /* Adjust font size for smaller screens */
+        }
+
+        .intro h5 {
+          font-size: 10pt;
+          /* Adjust font size for smaller screens */
+        }
+
+        .intro h4 {
+          font-size: 10pt;
+          /* Adjust font size for smaller screens */
+        }
+      }
+
+      /* Styles for larger screens */
+      @media only screen and (min-width: 601px) {
+        .navbar a i {
+          font-size: 18px;
+          /* Adjust the font size for icons in the top navbar */
+          margin-right: 5px;
+          /* Add some space between icons */
+        }
+
+        .content {
+          margin-top: 50px;
+          /* Adjust the margin to leave space for the fixed navbar */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="w3-top">
+      <div class="w3-bar" id="myNavbar">
+        <a href="javascript:void(0);" class="w3-bar-item w3-button w3-hover-black w3-right w3-hide-large w3-hide-medium" onclick="toggleFunction()" title="Toggle Navigation Menu">
+          <i class="fa fa-bars"></i>
+        </a>
+        <a href="index.html" class="w3-bar-item w3-button w3-mobile w3-hide-small">
+          <i class="fa-solid fa-home"></i> Home </a>
+        <a href="news.html" class="w3-bar-item w3-button w3-mobile w3-hide-small">
+          <i class="fa-solid fa-newspaper"></i> News </a>
+          <a href="scorecard.html" class="w3-bar-item w3-button w3-mobile w3-hide-small">
+            <i class="fa-solid fa-medal"></i> Scorecard </a>
+        <a href="gear.html" class="w3-bar-item w3-button w3-mobile w3-hide-small">
+          <i class="fa-solid fa-tshirt"></i> Gear </a>
+        <a href="featured.html" class="w3-bar-item w3-button w3-mobile w3-hide-small">
+          <i class="fa-solid fa-star"></i> Featured </a>
+        <a href="contact.html" class="w3-bar-item w3-button w3-mobile w3-hide-small">
+          <i class="fa-solid fa-envelope fa-shake"></i> Contact </a>
+      </div>
+    </div>
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium" style="position: fixed; top: 0; width: 90%; z-index: 1;">
+      <a href="index.html" class="w3-bar-item w3-button w3-mobile">
+        <i class="fa-solid fa-home"></i>
+      </a>
+      <a href="news.html" class="w3-bar-item w3-button w3-mobile">
+        <i class="fa-solid fa-newspaper"></i>
+      </a>
+      <a href="scorecard.html" class="w3-bar-item w3-button w3-mobile">
+        <i class="fa-solid fa-medal"></i>
+      </a>
+      <a href="gear.html" class="w3-bar-item w3-button w3-mobile">
+        <i class="fa-solid fa-tshirt"></i>
+      </a>
+      <a href="featured.html" class="w3-bar-item w3-button w3-mobile">
+        <i class="fa-solid fa-star"></i>
+      </a>
+      <a href="contact.html" class="w3-bar-item w3-button w3-mobile">
+        <i class="fa-solid fa-envelope fa-shake"></i>
+      </a>
+    </div>
+    <!-- Content Section -->
+    <div class="intro w3-content" style="max-width:1400px">
+      <header class="header w3-display-container w3-content w3-center w3-padding-64" style="max-width:1400px; min-width:500px;" id="home">
+        <img class="w3-image w3-border" src="imgs/ballheader.jpg" alt="ball">
+        <div class="w3-padding-64 w3-display-topright w3-margin-right" style="color: rgb(0, 0, 0);">
+          <h1>Clubhouse Chronicles</h1>
+        </div>
+      </header>
+      <div class="w3-content" style="max-width:1400px">
+        <div class="w3-row w3-padding-64" id="about">
+          <div class="w3-col m5 w3-padding-large">
+            <img src="imgs/chicgolf.jpg" class="w3-round w3-image w3-opacity-min" alt="Bag Prep" style="width: 100%;">
+          </div>
+          <div class="w3-col m6 w3-padding-large">
+            <div class="intro">
+              <h1 class="w3-center">What is Clubhouse Chronicles</h1>
+              <br>
+              <h5 class="w3-center">a newborn entity in the cradle of the current annum.</h5>
+              <p class="w3-large">"Behold, the radiant emergence of 'Clubhouse Chronicles,' a lively and all-encompassing digital haven crafted to be the quintessential abode for all things golf and the sophisticated tapestry of lifestyle in between. Conceived from the insight that golf aficionados yearn not just for the game but also for a more splendid connection with the very essence of the intertwined lifestyle. Join us on a sagacious journey as we unfold the story of its inception and how it masterfully weaves a seamless tapestry between the world of golf and the quirks of modern-day living. Our mission is to provide a sanctuary for enthusiasts where the love for golf converges with the finer aspects of contemporary living.</p>
+              <p class="w3-large w3-text-blue-grey">“Golf is a compromise between what your ego wants you to do, what experience tells you to do, and what your nerves let you do.” -Bruce Crampton</p>
+              <p class="w3-large">In the realm of golf, it's not merely about swinging clubs and sinking putts; it's a sport deeply rooted in tradition and values. Golf is a gentleman's (and women's) sport where respect is not just for the opponents but also for the course and the rich history that surrounds it. It's a game where camaraderie and competition coexist, reminding us that success is not only measured by the scorecard but also by the integrity with which we play. At Clubhouse Chronicles, we celebrate the essence of golf, encouraging not just the pursuit of fun on the fairways but a commitment to uphold the principles that make this sport truly special."</p>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="w3-row w3-padding-64" id="menu">
+          <div class="intro w3-col m5 w3-padding-large">
+            <div class="w3-col l6 w3-padding-large w3-hide-large">
+              <img src="imgs/menu.jpg" class="w3-round w3-image w3-opacity-min" alt="Menu" style="width:100%">
+            </div>
+            <h1 class="w3-center">Our Golf Gazette</h1>
+            <br>
+            <h4>Current Events Digest</h4>
+            <p class="w3-text-grey">A curated selection of the latest happenings in the golfing realm, served fresh for your avid consumption.</p>
+            <br>
+            <h4>Tournament Chronicles</h4>
+            <p class="w3-text-grey">Immerse yourself in the ongoing tournaments with a side of in-depth analysis, offering a front-row seat to the thrilling world of competitive golf.</p>
+            <br>
+            <h4>Course Showcase of the Week</h4>
+            <p class="w3-text-grey">Embark on a virtual journey to explore and appreciate the nuances of our selected golf course each week – a visual feast for the golfing connoisseur.</p>
+            <br>
+            <h4>Gear Odyssey: R&D Special</h4>
+            <p class="w3-text-grey">Delve into the Research and Development kitchen, where we whip up the latest trends and innovations in golf gear. Savor the anticipation of what's next in the golfing arsenal.</p>
+            <br>
+            <h4>Pro Tips Banquet</h4>
+            <p class="w3-text-grey">Savor the wisdom served by seasoned professionals. Our Pro Tips Banquet offers insights and techniques straight from the pros to elevate your golfing game.</p>
+          </div>
+          <div class="w3-col l6 w3-padding-large w3-hide-small w3-hide-medium">
+            <img src="imgs/menu.jpg" class="w3-round w3-image w3-opacity-min" alt="Menu" style="width:100%">
+          </div>
+        </div>
+      </div>
+      <footer class="w3-center w3-light-grey w3-padding-32">
+        <div>
+          <a href="https://twitter.com/" class="w3-hover-text-blue">
+            <i class="fab fa-twitter" style="font-size: 24px;"></i>
+          </a>
+          <a href="https://instagram.com/" class="w3-hover-text-purple">
+            <i class="fab fa-instagram" style="font-size: 24px;"></i>
+          </a>
+          <a href="https://tiktok.com" class="w3-hover-text-red">
+            <i class="fab fa-tiktok" style="font-size: 24px;"></i>
+          </a>
+          <a href="https://facebook.com" class="w3-hover-text-blue">
+            <i class="fab fa-facebook" style="font-size: 24px;"></i>
+          </a>
+        </div>
+      </footer>
+    </div>
+    <script>
+      // Change style of navbar on scroll
+      window.onscroll = function() {
+        myFunction()
+      };
+
+      function myFunction() {
+        var navbar = document.getElementById("myNavbar");
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+          navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+        } else {
+          navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+        }
+      }
+      // Used to toggle the menu on small screens when clicking on the menu button
+      function toggleFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>C.C. Scorecard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="imgs/w3.css">
+    <style>
+      body {
+        font-family: "Times New Roman", Georgia, Serif;
+        margin: 0;
+        /* Remove default margin to ensure full-width display */
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Playfair Display";
+        letter-spacing: 5px;
+      }
+
+      .navbar {
+        overflow: hidden;
+        background-color: #f1f1f1;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+      }
+
+      .navbar a {
+        float: right;
+        display: block;
+        color: #000;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .navbar {
+          display: none;
+          /* Hide the top navbar on small screens */
+        }
+
+        .content {
+          margin-top: 0;
+        }
+
+        .header h1 {
+          font-size: 6pt;
+          /* Adjust font size for smaller screens */
+        }
+
+        .intro h1 {
+          font-size: 12pt;
+          /* Adjust font size for smaller screens */
+        }
+
+        .intro h5 {
+          font-size: 10pt;
+          /* Adjust font size for smaller screens */
+        }
+
+        .intro h4 {
+          font-size: 10pt;
+          /* Adjust font size for smaller screens */
+        }
+      }
+
+      /* Styles for larger screens */
+      @media only screen and (min-width: 601px) {
+        .navbar a i {
+          font-size: 18px;
+          /* Adjust the font size for icons in the top navbar */
+          margin-right: 5px;
+          /* Add some space between icons */
+        }
+
+        .content {
+          margin-top: 50px;
+          /* Adjust the margin to leave space for the fixed navbar */
+        }
+      }
+
+      .column {
+        float: left;
+        width: 33.33%;
+        text-align: center;
+        font-size: 25px;
+        cursor: pointer;
+        color: white;
+      }
+
+      .containerTab {
+        padding: 20px;
+        color: white;
+      }
+
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      /* Closable button inside the container tab */
+      .closebtn {
+        float: right;
+        color: white;
+        font-size: 35px;
+        cursor: pointer;
+      }
+
+      .w3-row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -16px;
+      }
+
+      .w3-col {
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
+        box-sizing: border-box;
+        padding: 8px 16px;
+        /* Padding for the grid cells */
+        border: 1px solid #ddd;
+        /* Border for the grid cells */
+      }
+
+      /* Highlight header row */
+      .w3-row:first-child .w3-col {
+        background-color: #f2f2f2;
+      }
+
+      .row {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 0 auto;
+        /* Center the row horizontally */
+      }
+
+      .column {
+        width: 33.33%;
+        /* Set each column to take up one-third of the container */
+        text-align: center;
+        font-size: 25px;
+        cursor: pointer;
+        color: white;
+        box-sizing: border-box;
+        /* Include padding and border in the column's total width */
+        padding: 20px;
+      }
+
+      .w3-display-container {
+        width: 50%;
+        max-width: 1400px;
+        /* Set a maximum width if needed */
+        margin: 0 auto;
+        /* Center the container horizontally */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="w3-top">
+      <div class="w3-bar" id="myNavbar">
+        <a href="javascript:void(0);" class="w3-bar-item w3-button w3-hover-black w3-right w3-hide-large w3-hide-medium" onclick="toggleFunction()" title="Toggle Navigation Menu">
+          <i class="fa fa-bars"></i>
+        </a>
+        <a href="index.html" class="w3-bar-item w3-button w3-mobile w3-hide-small">
+          <i class="fa-solid fa-home"></i> Home </a>
+        <a href="news.html" class="w3-bar-item w3-button w3-mobile w3-hide-small">
+          <i class="fa-solid fa-newspaper"></i> News </a>
+        <a href="scorecard.html" class="w3-bar-item w3-button w3-mobile w3-hide-small">
+          <i class="fa-solid fa-medal"></i> Scorecard </a>
+        <a href="gear.html" class="w3-bar-item w3-button w3-mobile w3-hide-small">
+          <i class="fa-solid fa-tshirt"></i> Gear </a>
+        <a href="featured.html" class="w3-bar-item w3-button w3-mobile w3-hide-small">
+          <i class="fa-solid fa-star"></i> Featured </a>
+        <a href="contact.html" class="w3-bar-item w3-button w3-mobile w3-hide-small">
+          <i class="fa-solid fa-envelope fa-shake"></i> Contact </a>
+      </div>
+    </div>
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium" style="position: fixed; top: 0; width: 90%; z-index: 1;">
+      <a href="index.html" class="w3-bar-item w3-button w3-mobile">
+        <i class="fa-solid fa-home"></i>
+      </a>
+      <a href="news.html" class="w3-bar-item w3-button w3-mobile">
+        <i class="fa-solid fa-newspaper"></i>
+      </a>
+      <a href="scorecard.html" class="w3-bar-item w3-button w3-mobile">
+        <i class="fa-solid fa-medal"></i>
+      </a>
+      <a href="gear.html" class="w3-bar-item w3-button w3-mobile">
+        <i class="fa-solid fa-tshirt"></i>
+      </a>
+      <a href="featured.html" class="w3-bar-item w3-button w3-mobile">
+        <i class="fa-solid fa-star"></i>
+      </a>
+      <a href="contact.html" class="w3-bar-item w3-button w3-mobile">
+        <i class="fa-solid fa-envelope fa-shake"></i>
+      </a>
+    </div>
+    <div class="header">
+      <header class="header w3-display-container w3-content w3-center w3-padding-64" style="max-width:1100px; min-width:500px;" id="Scores">
+        <img class="w3-image w3-border" src="imgs/scorecard.png" alt="golfball">
+        <div class="w3-padding-64 w3-display-topright w3-margin-right" style="color: rgb(255, 255, 255);">
+          <h1>Scorecard</h1>
+        </div>
+      </header>
+    </div>
+    <div style="text-align:center" class="w3-padding-64">
+      <h2>Scorecard</h2>
+      <p>Week 14</p>
+    </div>
+    <div class="row">
+      <div class="column" onclick="openTab('b1');" style="background:rgb(190, 190, 190);"> The Masters Tournament </div>
+      <div class="column" onclick="openTab('b2');" style="background:rgb(54, 54, 54);"> Texas Rangers Golf Club </div>
+      <div class="column" onclick="openTab('b3');" style="background:rgb(14, 14, 14);"> Super Amatuer Scramble </div>
+    </div>
+    <div id="b1" class="containerTab" style="display:none;background:rgb(110, 110, 110)">
+      <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+      <h2>Round 3 - Complete</h2>
+      <!-- W3 grid within the container -->
+      <div class="w3-row">
+        <div class="w3-col">
+          <strong>Golfer's Name</strong>
+        </div>
+        <div class="w3-col">
+          <strong>Score for the Day</strong>
+        </div>
+        <div class="w3-col">
+          <strong>Total for the Tournament</strong>
+        </div>
+        <!-- Example data (replace this with actual data) -->
+        <div class="w3-col"> Tiger Woods </div>
+        <div class="w3-col"> 68 </div>
+        <div class="w3-col"> -5 </div>
+        <div class="w3-col"> Phil Mickelson </div>
+        <div class="w3-col"> 70 </div>
+        <div class="w3-col"> -6 </div>
+        <div class="w3-col"> Rory McIlroy </div>
+        <div class="w3-col"> 71 </div>
+        <div class="w3-col"> -3 </div>
+        <div class="w3-col"> Brooks Koepka </div>
+        <div class="w3-col"> 69 </div>
+        <div class="w3-col"> -7 </div>
+        <div class="w3-col"> Justin Thomas </div>
+        <div class="w3-col"> 72 </div>
+        <div class="w3-col"> -2 </div>
+        <div class="w3-col"> Jordan Spieth </div>
+        <div class="w3-col"> 73 </div>
+        <div class="w3-col"> -1 </div>
+        <div class="w3-col"> Jon Rahm </div>
+        <div class="w3-col"> 70 </div>
+        <div class="w3-col"> -5 </div>
+        <div class="w3-col"> Rickie Fowler </div>
+        <div class="w3-col"> 75 </div>
+        <div class="w3-col"> +3 </div>
+        <div class="w3-col"> Bubba Watson </div>
+        <div class="w3-col"> 71 </div>
+        <div class="w3-col"> -2 </div>
+        <div class="w3-col"> Hideki Matsuyama </div>
+        <div class="w3-col"> 68 </div>
+        <div class="w3-col"> -8 </div>
+        <div class="w3-col"> Jason Day </div>
+        <div class="w3-col"> 76 </div>
+        <div class="w3-col"> +1 </div>
+        <div class="w3-col"> Patrick Reed </div>
+        <div class="w3-col"> 73 </div>
+        <div class="w3-col"> E </div>
+        <div class="w3-col"> Sergio Garcia </div>
+        <div class="w3-col"> 74 </div>
+        <div class="w3-col"> +1 </div>
+        <div class="w3-col"> Adam Scott </div>
+        <div class="w3-col"> 72 </div>
+        <div class="w3-col"> -3 </div>
+        <div class="w3-col"> Tony Finau </div>
+        <div class="w3-col"> 71 </div>
+        <div class="w3-col"> -4 </div>
+        <div class="w3-col"> Tommy Fleetwood </div>
+        <div class="w3-col"> 75 </div>
+        <div class="w3-col"> +2 </div>
+        <div class="w3-col"> Collin Morikawa </div>
+        <div class="w3-col"> 69 </div>
+        <div class="w3-col"> -9 </div>
+        <div class="w3-col"> Patrick Cantlay </div>
+        <div class="w3-col"> 70 </div>
+        <div class="w3-col"> -6 </div>
+        <div class="w3-col"> Matthew Wolff </div>
+        <div class="w3-col"> 74 </div>
+        <div class="w3-col"> +1 </div>
+      </div>
+    </div>
+    <div id="b2" class="containerTab" style="display:none;background:rgb(139, 136, 136)">
+      <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+      <h2>Round 2 - In progress</h2>
+      <!-- W3 grid within the container -->
+      <div class="w3-row">
+        <div class="w3-col">
+          <strong>Golfer</strong>
+        </div>
+        <div class="w3-col">
+          <strong>Score</strong>
+        </div>
+        <div class="w3-col">
+          <strong>Total</strong>
+        </div>
+        <!-- Example data (replace this with actual data) -->
+        <h2>Korn Ferry Tour - Day 2</h2>
+        <!-- W3 grid within the container -->
+        <div class="w3-row">
+          <div class="w3-col">
+            <strong>Golfer's Name</strong>
+          </div>
+          <div class="w3-col">
+            <strong>Score for the Day</strong>
+          </div>
+          <div class="w3-col">
+            <strong>Total for the Tournament</strong>
+          </div>
+          <!-- Example data (replace this with actual data) -->
+          <div class="w3-col"> Scottie Scheffler </div>
+          <div class="w3-col"> 65 </div>
+          <div class="w3-col"> -10 </div>
+          <div class="w3-col"> Viktor Hovland </div>
+          <div class="w3-col"> 66 </div>
+          <div class="w3-col"> -8 </div>
+          <div class="w3-col"> Tony Finau </div>
+          <div class="w3-col"> 68 </div>
+          <div class="w3-col"> -6 </div>
+          <div class="w3-col"> Matthew Wolff </div>
+          <div class="w3-col"> 69 </div>
+          <div class="w3-col"> -5 </div>
+          <div class="w3-col"> Tommy Fleetwood </div>
+          <div class="w3-col"> 70 </div>
+          <div class="w3-col"> -4 </div>
+          <div class="w3-col"> Matt Wallace </div>
+          <div class="w3-col"> 71 </div>
+          <div class="w3-col"> -3 </div>
+          <div class="w3-col"> Sungjae Im </div>
+          <div class="w3-col"> 71 </div>
+          <div class="w3-col"> -3 </div>
+          <div class="w3-col"> Patrick Cantlay </div>
+          <div class="w3-col"> 72 </div>
+          <div class="w3-col"> -2 </div>
+          <div class="w3-col"> Hideki Matsuyama </div>
+          <div class="w3-col"> 73 </div>
+          <div class="w3-col"> -1 </div>
+          <div class="w3-col"> Jason Day </div>
+          <div class="w3-col"> 74 </div>
+          <div class="w3-col"> E </div>
+          <div class="w3-col"> Patrick Reed </div>
+          <div class="w3-col"> 75 </div>
+          <div class="w3-col"> +1 </div>
+          <div class="w3-col"> Adam Scott </div>
+          <div class="w3-col"> 75 </div>
+          <div class="w3-col"> +1 </div>
+          <div class="w3-col"> Jon Rahm </div>
+          <div class="w3-col"> 75 </div>
+          <div class="w3-col"> +1 </div>
+          <div class="w3-col"> Bubba Watson </div>
+          <div class="w3-col"> 76 </div>
+          <div class="w3-col"> +2 </div>
+          <div class="w3-col"> Collin Morikawa </div>
+          <div class="w3-col"> 76 </div>
+          <div class="w3-col"> +2 </div>
+          <div class="w3-col"> Rickie Fowler </div>
+          <div class="w3-col"> 77 </div>
+          <div class="w3-col"> +3 </div>
+          <div class="w3-col"> Sergio Garcia </div>
+          <div class="w3-col"> 78 </div>
+          <div class="w3-col"> +4 </div>
+          <div class="w3-col"> Justin Thomas </div>
+          <div class="w3-col"> 79 </div>
+          <div class="w3-col"> +5 </div>
+          <div class="w3-col"> Jordan Spieth </div>
+          <div class="w3-col"> 80 </div>
+          <div class="w3-col"> +6 </div>
+        </div>
+        <!-- Repeat for other rows -->
+      </div>
+    </div>
+    <div id="b3" class="containerTab" style="display:none;background:rgb(165, 158, 158)">
+      <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+      <h2>Amateur Championship</h2>
+      <!-- W3 grid within the container -->
+      <div class="w3-row">
+        <div class="w3-col">
+          <strong>Golfer's Name</strong>
+        </div>
+        <div class="w3-col">
+          <strong>Score for the Day</strong>
+        </div>
+        <div class="w3-col">
+          <strong>Total for the Tournament</strong>
+        </div>
+        <div class="w3-col"> Birdie McPutter </div>
+        <div class="w3-col"> 62 </div>
+        <div class="w3-col"> -18 </div>
+        <div class="w3-col"> Ace Teeoffington </div>
+        <div class="w3-col"> 65 </div>
+        <div class="w3-col"> -15 </div>
+        <div class="w3-col"> Chip Fairwayman </div>
+        <div class="w3-col"> 67 </div>
+        <div class="w3-col"> -13 </div>
+        <div class="w3-col"> Bogey McSlice </div>
+        <div class="w3-col"> 70 </div>
+        <div class="w3-col"> -10 </div>
+        <div class="w3-col"> Mulligan Strokeheart </div>
+        <div class="w3-col"> 72 </div>
+        <div class="w3-col"> -8 </div>
+        <div class="w3-col"> Albatross Thunderputt </div>
+        <div class="w3-col"> 62 </div>
+        <div class="w3-col"> -18 </div>
+        <div class="w3-col"> Eagle Greenslam </div>
+        <div class="w3-col"> 65 </div>
+        <div class="w3-col"> -15 </div>
+        <div class="w3-col"> Sandie Hazardsmith </div>
+        <div class="w3-col"> 68 </div>
+        <div class="w3-col"> -12 </div>
+        <div class="w3-col"> Par Putterson </div>
+        <div class="w3-col"> 70 </div>
+        <div class="w3-col"> -10 </div>
+        <div class="w3-col"> Fore Sliceington </div>
+        <div class="w3-col"> 73 </div>
+        <div class="w3-col"> -7 </div>
+        <div class="w3-col"> Hole-in-One Johnson </div>
+        <div class="w3-col"> 61 </div>
+        <div class="w3-col"> -19 </div>
+        <div class="w3-col"> Fairway Maverick </div>
+        <div class="w3-col"> 64 </div>
+        <div class="w3-col"> -16 </div>
+        <div class="w3-col"> Sandtrap McGiggle </div>
+        <div class="w3-col"> 66 </div>
+        <div class="w3-col"> -14 </div>
+        <div class="w3-col"> Puttmaster Flash </div>
+        <div class="w3-col"> 69 </div>
+        <div class="w3-col"> -11 </div>
+        <div class="w3-col"> Teebird Skyrocket </div>
+        <div class="w3-col"> 71 </div>
+        <div class="w3-col"> -9 </div>
+        <div class="w3-col"> Iron Lady Swingsalot </div>
+        <div class="w3-col"> 63 </div>
+        <div class="w3-col"> -17 </div>
+        <div class="w3-col"> Bogey Bogeyington </div>
+        <div class="w3-col"> 68 </div>
+        <div class="w3-col"> -12 </div>
+        <div class="w3-col"> Chip Chipster </div>
+        <div class="w3-col"> 72 </div>
+        <div class="w3-col"> -8 </div>
+        <div class="w3-col"> Par Chipparoni </div>
+        <div class="w3-col"> 70 </div>
+        <div class="w3-col"> -10 </div>
+        <div class="w3-col"> Slice Sliceington </div>
+        <div class="w3-col"> 67 </div>
+        <div class="w3-col"> -13 </div>
+        <!-- Add more golfers as needed -->
+      </div>
+    </div>
+    <script>
+      // Change style of navbar on scroll
+      window.onscroll = function() {
+        myFunction()
+      };
+
+      function myFunction() {
+        var navbar = document.getElementById("myNavbar");
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+          navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+        } else {
+          navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+        }
+      }
+      // Used to toggle the menu on small screens when clicking on the menu button
+      function toggleFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+
+      function openTab(tabName) {
+        var i, x;
+        x = document.getElementsByClassName("containerTab");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        document.getElementById(tabName).style.display = "block";
+      }
+    </script>
+  </body>
+</html>

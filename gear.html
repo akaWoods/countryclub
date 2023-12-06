@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>C.C. Gear</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="imgs/w3.css">
+    <style>
+      body {
+        font-family: "Times New Roman", Georgia, Serif;
+        margin: 0;
+        /* Remove default margin to ensure full-width display */
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Playfair Display";
+        letter-spacing: 5px;
+      }
+
+      .navbar {
+        overflow: hidden;
+        background-color: #f1f1f1;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+      }
+
+      .navbar a {
+        float: right;
+        display: block;
+        color: #000;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .navbar {
+          display: none;
+          /* Hide the top navbar on small screens */
+        }
+
+        .content {
+          margin-top: 0;
+        }
+
+        .header h1 {
+          font-size: 6pt;
+          /* Adjust font size for smaller screens */
+        }
+
+        .intro h1 {
+          font-size: 12pt;
+          /* Adjust font size for smaller screens */
+        }
+
+        .intro h5 {
+          font-size: 10pt;
+          /* Adjust font size for smaller screens */
+        }
+
+        .intro h4 {
+          font-size: 10pt;
+          /* Adjust font size for smaller screens */
+        }
+      }
+
+      /* Styles for larger screens */
+      @media only screen and (min-width: 601px) {
+        .navbar a i {
+          font-size: 18px;
+          /* Adjust the font size for icons in the top navbar */
+          margin-right: 5px;
+          /* Add some space between icons */
+        }
+
+        .content {
+          margin-top: 50px;
+          /* Adjust the margin to leave space for the fixed navbar */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="w3-top">
+      <div class="w3-bar" id="myNavbar">
+        <a href="javascript:void(0);" class="w3-bar-item w3-button w3-hover-black w3-right w3-hide-large w3-hide-medium" onclick="toggleFunction()" title="Toggle Navigation Menu">
+          <i class="fa fa-bars"></i>
+        </a>
+        <a href="index.html" class="w3-bar-item w3-button w3-mobile w3-hide-small">
+          <i class="fa-solid fa-home"></i> Home </a>
+        <a href="news.html" class="w3-bar-item w3-button w3-mobile w3-hide-small">
+          <i class="fa-solid fa-newspaper"></i> News </a>
+        <a href="scorecard.html" class="w3-bar-item w3-button w3-mobile w3-hide-small">
+          <i class="fa-solid fa-medal"></i> Scorecard </a>
+        <a href="gear.html" class="w3-bar-item w3-button w3-mobile w3-hide-small">
+          <i class="fa-solid fa-tshirt"></i> Gear </a>
+        <a href="featured.html" class="w3-bar-item w3-button w3-mobile w3-hide-small">
+          <i class="fa-solid fa-star"></i> Featured </a>
+        <a href="contact.html" class="w3-bar-item w3-button w3-mobile w3-hide-small">
+          <i class="fa-solid fa-envelope fa-shake"></i> Contact </a>
+      </div>
+    </div>
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium" style="position: fixed; top: 0; width: 90%; z-index: 1;">
+      <a href="index.html" class="w3-bar-item w3-button w3-mobile">
+        <i class="fa-solid fa-home"></i>
+      </a>
+      <a href="news.html" class="w3-bar-item w3-button w3-mobile">
+        <i class="fa-solid fa-newspaper"></i>
+      </a>
+      <a href="scorecard.html" class="w3-bar-item w3-button w3-mobile">
+        <i class="fa-solid fa-medal"></i>
+      </a>
+      <a href="gear.html" class="w3-bar-item w3-button w3-mobile">
+        <i class="fa-solid fa-tshirt"></i>
+      </a>
+      <a href="featured.html" class="w3-bar-item w3-button w3-mobile">
+        <i class="fa-solid fa-star"></i>
+      </a>
+      <a href="contact.html" class="w3-bar-item w3-button w3-mobile">
+        <i class="fa-solid fa-envelope fa-shake"></i>
+      </a>
+    </div>
+    <div class="header">
+      <header class="header w3-display-container w3-content w3-center w3-padding-64" style="max-width:1100px; min-width:500px;" id="News">
+        <img class="w3-image w3-border" src="imgs/gear.jpeg" alt="oldgolfbag">
+        <div class="w3-padding-64 w3-display-topright w3-margin-right" style="color: rgb(255, 255, 255);">
+          <h1>What's In The Bag</h1>
+        </div>
+      </header>
+    </div>
+    <div class="intro w3-content" style="max-width:1100px">
+      <div class="w3-row w3-padding-64" id="drivers">
+        <div class="w3-col m6 w3-padding-large w3-hide-large w3-hide-medium">
+          <h1 class="w3-center">TaylorMade Stealth 2 Driver Review</h1>
+        </div>
+        <!-- Grid layout for the images -->
+        <div class="w3-half">
+          <div class="w3-card-4 m4 w3-padding-64">
+            <img src="imgs/stealth1.jpg" class=" w3-round w3-image w3-opacity-min" alt="Stealth 1 Driver" style="height:500px">
+          </div>
+          <div class="w3-card-4 m4 w3-padding-64">
+            <img src="imgs/stealth2.jpg" class="w3-round w3-image w3-opacity-min" alt="Stealth 2 Driver" style="height:500px">
+          </div>
+          <div class="w3-card-4 m4 w3-padding-64">
+            <img src="imgs/stealth3.jpg" class="w3-round w3-image w3-opacity-min" alt="Stealth 2 Driver" style="height:500px">
+          </div>
+        </div>
+        <div class="w3-col m6 w3-padding-large w3-hide-small">
+          <h1 class="w3-center">TaylorMade Stealth 2 Driver Review</h1>
+        </div>
+        <div class="w3-col m6 w3-padding-large">
+          <h3 class="w3-center">Unleashing Power and Precision on the Course</h3>
+          <p class="w3-large">The TaylorMade Stealth 2 Driver has garnered widespread acclaim in the golfing community, and after a thorough consensus from various sources, here's an in-depth review of this high-performance golf club.</p>
+          <h4>Key Features:</h4>
+          <ul>
+            <li>
+              <strong>Speed-Injected Twist Face:</strong> The innovative Speed-Injected Twist Face technology optimizes the face curvature to deliver incredible ball speed and accuracy even on off-center hits.
+            </li>
+            <li>
+              <strong>Carbon Crown Construction:</strong> The lightweight carbon crown allows for precise weight distribution, resulting in enhanced forgiveness and a higher launch.
+            </li>
+            <li>
+              <strong>Adjustable Loft Sleeve:</strong> Customizable loft settings provide flexibility to golfers, allowing them to fine-tune their launch conditions for optimal performance.
+            </li>
+          </ul>
+          <h4>Performance:</h4>
+          <p class="w3-large">Golfers consistently praise the Stealth 2 Driver for its exceptional performance on the course. The Speed-Injected Twist Face technology, coupled with the carbon crown construction, contributes to remarkable distance and forgiveness. Players have reported increased ball speed, a more consistent trajectory, and improved accuracy, making it a valuable asset for both amateurs and professionals alike.</p>
+          <h4>Feel and Sound:</h4>
+          <p class="w3-large">The Stealth 2 Driver is lauded for its solid feel and pleasing sound at impact. Golfers appreciate the feedback, which adds to the overall confidence and enjoyment of the game. The driver's balance of power and precision creates a satisfying experience that resonates with players seeking a responsive and enjoyable club.</p>
+          <h4>Design:</h4>
+          <p class="w3-large">TaylorMade's attention to design is evident in the Stealth 2. The sleek and aerodynamic shape not only enhances the club's aesthetics but also contributes to improved clubhead speed. The matte finish and visually appealing details make it a standout choice for those who appreciate both performance and style. The overall design not only looks great in the bag but also instills confidence at address, a crucial aspect of a golfer's mental game.</p>
+          <h4>Customization Options:</h4>
+          <p class="w3-large">The Stealth 2 Driver offers a range of customization options, allowing golfers to personalize their club to suit their playing style. Whether adjusting the loft sleeve for launch conditions or selecting from various shaft options, the club provides a tailored experience that caters to individual preferences.</p>
+          <p class="w3-large">In summary, the TaylorMade Stealth 2 Driver has earned its reputation as a top-tier golf club, combining cutting-edge technology with superior design. Whether you're seeking more distance, forgiveness, a satisfying feel, or customization options, the Stealth 2 delivers on multiple fronts, making it a coveted choice for golfers looking to elevate their game.</p>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="intro w3-content" style="max-width:1100px">
+      <div class="w3-row w3-padding-64" id="irons">
+        <div class="w3-col m6 w3-padding-large w3-hide-large w3-hide-medium">
+          <h1 class="w3-center">Ping i525 Iron Set Review</h1>
+        </div>
+        <!-- Grid layout for the images -->
+        <div class="w3-half">
+          <div class="w3-card-4 m4 w3-padding-64">
+            <img src="imgs/irons1.jpg" class=" w3-round w3-image w3-opacity-min" alt="Ping i525 Iron Set" style="height:500px">
+          </div>
+          <div class="w3-card-4 m4 w3-padding-large">
+            <img src="imgs/iron2.jpg" class="w3-round w3-image w3-opacity-min" alt="Ping i525 Iron Set" style="height:500px">
+          </div>
+          <div class="w3-card-4 m4 w3-padding-large">
+            <img src="imgs/iron3.jpg" class="w3-round w3-image w3-opacity-min" alt="Ping i525 Iron Set" style="height:500px">
+          </div>
+        </div>
+        <div class="w3-col m6 w3-padding-large w3-hide-small">
+          <h1 class="w3-center">Ping i525 Iron Set Review</h1>
+        </div>
+        <div class="w3-col m6 w3-padding-large">
+          <br>
+          <h3 class="w3-center">Precision Irons for Every Swing</h3>
+          <p class="w3-large">Discover the Ping i525 Iron Set, a comprehensive solution for golfers seeking accuracy and control on the course. This iron set, ranging from 4-PW, is engineered to enhance your performance with each swing. Read on for an in-depth review of this precision-crafted iron set.</p>
+          <h4>Key Features:</h4>
+          <ul>
+            <li>
+              <strong>Forged Cavity Back Design:</strong> The forged cavity back construction of the i525 irons provides a blend of forgiveness and control, making them suitable for golfers of varying skill levels.
+            </li>
+            <li>
+              <strong>Variable Face Thickness (VFT) Technology:</strong> The VFT technology optimizes the thickness of the iron face, enhancing ball speed and consistency across the clubface.
+            </li>
+            <li>
+              <strong>Tungsten Toe Weighting:</strong> Tungsten toe weighting in the longer irons increases forgiveness and stability, promoting a higher launch and improved distance.
+            </li>
+            <li>
+              <strong>Progressive Set Design:</strong> The i525 set features a progressive design, with each iron carefully tuned for its specific role in providing optimal trajectory and playability throughout the set.
+            </li>
+            <li>
+              <strong>HydroPearl 2.0 Finish:</strong> The HydroPearl 2.0 finish on the i525 irons helps repel water and reduces friction, ensuring consistent performance in various playing conditions.
+            </li>
+          </ul>
+          <h4>Performance:</h4>
+          <p class="w3-large">Golfers appreciate the consistent performance of the Ping i525 Iron Set. The combination of the forged cavity back design, VFT technology, and tungsten toe weighting results in a solid feel and impressive ball speed. The progressive set design adds versatility to each iron, catering to the specific demands of different shots on the course.</p>
+          <h4>Design:</h4>
+          <p class="w3-large">The design of the Ping i525 Iron Set reflects a commitment to precision and aesthetics. The HydroPearl 2.0 finish not only adds a visually appealing touch but also contributes to the durability of the irons. Whether you're looking for performance or a sophisticated look in your golf bag, the i525 delivers on both fronts.</p>
+          <h4>Feel and Feedback:</h4>
+          <p class="w3-large">Golfers often highlight the exceptional feel and feedback provided by the Ping i525 Iron Set. The irons offer a responsive experience, allowing players to gauge the quality of their shots and make necessary adjustments. This feedback contributes to the overall confidence and control that golfers experience with these irons.</p>
+          <p class="w3-large">In summary, the Ping i525 Iron Set is a versatile choice for golfers seeking a balance of forgiveness, control, and distance. With its advanced features, progressive set design, and attention to detail, this iron set is a valuable addition to any golfer's arsenal.</p>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="intro w3-content" style="max-width:1100px">
+      <div class="w3-row w3-padding-64" id="putters">
+        <div class="w3-row m6 w3-padding-large w3-hide-large w3-hide-medium">
+          <h1 class="w3-center">Scotty Cameron Super Rat Concept 1 GSS Circle T Putter</h1>
+        </div>
+        <!-- Grid layout for the images -->
+        <div class="w3-third">
+          <div class="w3-card-4 m4 w3-padding-64" style="margin-right: 15px;">
+            <img src="imgs/scotty1.jpg" class="w3-round w3-image w3-opacity-min" alt="Scotty Cameron Putter 1" style="width: 100%">
+          </div>
+        </div>
+        <div class="w3-third">
+          <div class="w3-card-4 m4 w3-padding-64" style="margin-right: 15px; margin-left: 15px;">
+            <img src="imgs/scotty2.jpg" class="w3-round w3-image w3-opacity-min" alt="Scotty Cameron Putter 2" style="width: 100%">
+          </div>
+        </div>
+        <div class="w3-third">
+          <div class="w3-card-4 m4 w3-padding-64" style="margin-left: 15px; margin-right: 15px;">
+            <img src="imgs/scotty3.jpg" class="w3-round w3-image w3-opacity-min" alt="Scotty Cameron Putter 3" style="width: 100%">
+          </div>
+        </div>
+        <div class="w3-row m6 w3-padding-large w3-hide-small">
+          <h1 class="w3-center">Scotty Cameron Super Rat Concept 1 GSS Circle T Putter</h1>
+        </div>
+        <div class="w3-row m6 w3-padding-large">
+          <br>
+          <h3 class="w3-center">The Epitome of Putter Excellence</h3>
+          <p class="w3-large">The Scotty Cameron Tour Only Black Super Rat Concept 1 GSS Circle T putter is a legendary piece of golfing craftsmanship. This super rare and highly sought-after putter represents the pinnacle of precision and performance in the world of golf.</p>
+          <h4>Key Features:</h4>
+          <ul>
+            <li>
+              <strong>GSS Construction:</strong> Crafted from German Stainless Steel (GSS), this putter offers a unique blend of soft feel and exceptional feedback. The GSS Circle T designation signifies the highest quality materials and construction.
+            </li>
+            <li>
+              <strong>Black Finish:</strong> The sleek and elegant black finish not only adds a touch of sophistication but also minimizes glare, ensuring a distraction-free putting experience.
+            </li>
+            <li>
+              <strong>Super Rat Concept 1 Design:</strong> The Super Rat Concept 1 design is revered for its clean lines, precise milling, and optimal weight distribution. It's a putter that not only performs at the highest level but also captivates with its aesthetic appeal.
+            </li>
+            <li>
+              <strong>Tour-Proven Performance:</strong> This putter has been trusted by tour professionals around the world. The Circle T designation indicates that it meets the stringent standards required for professional use on the PGA Tour.
+            </li>
+          </ul>
+          <h4>Performance:</h4>
+          <p class="w3-large">The Super Rat Concept 1 GSS Circle T putter delivers a putting experience like no other. Golfers who have had the privilege of using this masterpiece praise its exceptional feel, consistency, and ability to provide the utmost control on the greens.</p>
+          <h4>Collectible Rarity:</h4>
+          <p class="w3-large">As a super rare and highly collectible item, the Super Rat Concept 1 GSS Circle T putter is not only a precision instrument for your game but also a coveted piece of golfing history. Owning one is a testament to your appreciation for the finest golf equipment available.</p>
+          <p class="w3-large">In summary, the Scotty Cameron Tour Only Black Super Rat Concept 1 GSS Circle T putter is the epitome of putter excellence. From its luxurious materials to its tour-proven performance, this putter stands as a symbol of unrivaled quality and craftsmanship. While its rarity and price tag may make it elusive for many, those fortunate enough to wield it experience putting nirvana.</p>
+        </div>
+      </div>
+    </div>
+    <footer class="w3-center w3-light-grey w3-padding-32">
+      <div>
+        <a href="https://twitter.com/" class="w3-hover-text-blue">
+          <i class="fab fa-twitter" style="font-size: 24px;"></i>
+        </a>
+        <a href="https://instagram.com/" class="w3-hover-text-purple">
+          <i class="fab fa-instagram" style="font-size: 24px;"></i>
+        </a>
+        <a href="https://tiktok.com" class="w3-hover-text-red">
+          <i class="fab fa-tiktok" style="font-size: 24px;"></i>
+        </a>
+        <a href="https://facebook.com" class="w3-hover-text-blue">
+          <i class="fab fa-facebook" style="font-size: 24px;"></i>
+        </a>
+      </div>
+    </footer>
+    <script>
+      // Change style of navbar on scroll
+      window.onscroll = function() {
+        myFunction()
+      };
+
+      function myFunction() {
+        var navbar = document.getElementById("myNavbar");
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+          navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+        } else {
+          navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+        }
+      }
+      // Used to toggle the menu on small screens when clicking on the menu button
+      function toggleFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+    </script>
+  </body>
+</html>

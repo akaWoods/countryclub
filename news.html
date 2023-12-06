@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>C.C News</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="imgs/w3.css">
+    <style>
+      body {
+        font-family: "Times New Roman", Georgia, Serif;
+        margin: 0;
+        /* Remove default margin to ensure full-width display */
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Playfair Display";
+        letter-spacing: 5px;
+      }
+
+      .navbar {
+        overflow: hidden;
+        background-color: #f1f1f1;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+      }
+
+      .navbar a {
+        float: right;
+        display: block;
+        color: #000;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .navbar {
+          display: none;
+          /* Hide the top navbar on small screens */
+        }
+
+        .content {
+          margin-top: 0;
+        }
+
+        .header h1 {
+          font-size: 6pt;
+          /* Adjust font size for smaller screens */
+        }
+
+        .intro h1 {
+          font-size: 12pt;
+          /* Adjust font size for smaller screens */
+        }
+
+        .intro h5 {
+          font-size: 10pt;
+          /* Adjust font size for smaller screens */
+        }
+
+        .intro h4 {
+          font-size: 10pt;
+          /* Adjust font size for smaller screens */
+        }
+      }
+
+      /* Styles for larger screens */
+      @media only screen and (min-width: 601px) {
+        .navbar a i {
+          font-size: 18px;
+          /* Adjust the font size for icons in the top navbar */
+          margin-right: 5px;
+          /* Add some space between icons */
+        }
+
+        .content {
+          margin-top: 50px;
+          /* Adjust the margin to leave space for the fixed navbar */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="w3-top">
+      <div class="w3-bar" id="myNavbar">
+        <a href="javascript:void(0);" class="w3-bar-item w3-button w3-hover-black w3-right w3-hide-large w3-hide-medium" onclick="toggleFunction()" title="Toggle Navigation Menu">
+          <i class="fa fa-bars"></i>
+        </a>
+        <a href="index.html" class="w3-bar-item w3-button w3-mobile w3-hide-small">
+          <i class="fa-solid fa-home"></i> Home </a>
+        <a href="news.html" class="w3-bar-item w3-button w3-mobile w3-hide-small">
+          <i class="fa-solid fa-newspaper"></i> News </a>
+        <a href="scorecard.html" class="w3-bar-item w3-button w3-mobile w3-hide-small">
+          <i class="fa-solid fa-medal"></i> Scorecard </a>
+        <a href="gear.html" class="w3-bar-item w3-button w3-mobile w3-hide-small">
+          <i class="fa-solid fa-tshirt"></i> Gear </a>
+        <a href="featured.html" class="w3-bar-item w3-button w3-mobile w3-hide-small">
+          <i class="fa-solid fa-star"></i> Featured </a>
+        <a href="contact.html" class="w3-bar-item w3-button w3-mobile w3-hide-small">
+          <i class="fa-solid fa-envelope fa-shake"></i> Contact </a>
+      </div>
+    </div>
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium" style="position: fixed; top: 0; width: 90%; z-index: 1;">
+      <a href="index.html" class="w3-bar-item w3-button w3-mobile">
+        <i class="fa-solid fa-home"></i>
+      </a>
+      <a href="news.html" class="w3-bar-item w3-button w3-mobile">
+        <i class="fa-solid fa-newspaper"></i>
+      </a>
+      <a href="scorecard.html" class="w3-bar-item w3-button w3-mobile">
+        <i class="fa-solid fa-medal"></i>
+      </a>
+      <a href="gear.html" class="w3-bar-item w3-button w3-mobile">
+        <i class="fa-solid fa-tshirt"></i>
+      </a>
+      <a href="featured.html" class="w3-bar-item w3-button w3-mobile">
+        <i class="fa-solid fa-star"></i>
+      </a>
+      <a href="contact.html" class="w3-bar-item w3-button w3-mobile">
+        <i class="fa-solid fa-envelope fa-shake"></i>
+      </a>
+    </div>
+    <!-- Content Section -->
+    <div class="header">
+      <header class="header w3-display-container w3-content w3-center w3-padding-64" style="max-width:1100px; min-width:500px;" id="News">
+        <img class="w3-image w3-border" src="imgs/news.jpeg" alt="headernews">
+        <div class="w3-padding-64 w3-display-topright w3-margin-right" style="color: rgb(0, 0, 0);">
+          <h1>In The Spotlight</h1>
+        </div>
+      </header>
+    </div>
+    <div class="intro w3-content" style="max-width:1100px">
+      <div class="w3-row w3-padding-64" id="news">
+        <div class="w3-col m6 w3-padding-large">
+          <img src="imgs/newscharity.jpeg" class="w3-round w3-image w3-opacity-min" alt="Bag Prep" width="600" height="800">
+        </div>
+        <div class="w3-col m6 w3-padding-large">
+          <h1 class="w3-center">Chip Thunderbird and Tee Nibbler Tee Up Laughter and Charity Triumph at Whimsical Golf Event</h1>
+          <br>
+          <h5 class="w3-center">"In the realm of golf, we're not just chasing birdies—we're befriending them!" - Chip Thunderbird</h5>
+          <p class="w3-large">In a recent charity golf event at Nonsensica Golf Club, Chip Thunderbird and Tee Nibbler, the dynamic duo known for their whimsical antics, added a touch of class and laughter to the greens.During the tournament, Chip and Tee turned every swing into a spectacle, using rubber chickens as clubs and convincing gnomes to moonwalk. However, the defining moment came on the 18th hole when a stray golf ball threatened a VIP. In a gravity-defying leap, Chip intercepted the rogue ball mid-air, earning cheers from the crowd. In this fanciful world, Chip and Tee weren't just entertainers; they became unexpected heroes, blending heroics and humor in a way only they could. The incident showcased that even in the whimsical world of Nonsensica, there's room for class, laughter, and a sprinkle of unexpected heroism.</p>
+        </div>
+      </div>
+      <hr>
+      <div class="w3-row w3-padding-64" id="menu">
+        <div class="w3-col l6 w3-padding-large">
+          <h1 class="w3-center">Heartwarming Triumph</h1>
+          <br>
+          <p class="w3-text-grey w3-large">Meet Sage Greenshadow, the venerable golf sage, and Spark Whistlewing, the earnest underdog with a passion for the game. Despite being the least likely champion, Spark possessed an indomitable spirit and an unwavering love for golf. <br>Under Sage's wise guidance, Spark faced challenges that would have disheartened even the most seasoned golfers. Yet, he turned setbacks into stepping stones. In a climactic moment on the final hole, Spark, against all odds, sunk a breathtaking putt that echoed through the hearts of onlookers. Sage and Spark's story reminds us that in the world of golf, as in life, triumph often comes in unexpected forms. Through fairways and friendships, they crafted a tale that resonates beyond the greens, leaving an enduring mark on the hearts of all who witnessed the journey of an unlikely champion. </p>
+          <br>
+          <h5>"In the game of golf, every swing is a step toward triumph, and every missed putt is a lesson in resilience." - Sage Greenshadow, the Wise Golf Sage</h5>
+          <br>
+        </div>
+        <div class="w3-col l6 w3-padding-large">
+          <img src="imgs/news2.jpg" class="w3-round w3-image w3-opacity-min" alt="Menu" style="width:100%">
+        </div>
+      </div>
+      <hr>
+      <div class="w3-col m12 w3-padding-large" id="news3">
+        <div class="w3-col m12 w3-padding-large">
+          <img src="imgs/news3.jpeg" class="w3-round w3-image w3-opacity-min" alt="news3" style="width: 100%;">
+        </div>
+        <div class="w3-col m12 w3-padding-large">
+          <h1 class="w3-center">Unprecedented Feat: Amateur Golfer's 18 Hole-in-One Streak Defies Odds</h1>
+          <br>
+          <h5 class="w3-center">"They say luck is when preparation meets opportunity. Well, this golfer must have prepared for a lifetime." - Rory Eagleshoot, Golf Analyst</h5>
+          <p class="w3-large">In the serene backdrop of Evergreen Links, a tale unfolded that transcended the ordinary and danced on the fringes of disbelief. Meet Skylar Fairweather, an unknown amateur golfer whose meteoric rise to fame was nothing short of extraordinary. Skylar's journey began humbly, practicing swings amidst the dew-kissed grass, his dreams reaching for the sky.</p>
+          <p class="w3-large">The spotlight shone on Skylar during the Amateur Invitational, a tournament that would etch his name in golfing history. As the first tee-off echoed, Skylar embarked on a journey that defied not only the laws of probability but the very essence of golfing reality. Hole after hole, Skylar's precision was uncanny, as if he had struck a cosmic deal with the golfing gods themselves.</p>
+          <p class="w3-large">By the time Skylar reached the 18th hole, the gallery, a mix of awe and suspicion, couldn't fathom the unthinkable: 18 consecutive hole-in-ones. Skepticism, like an unwanted caddy, loomed over the greens, with whispers of secret magnets and enchanted golf balls. The tournament organizers even considered scrutinizing Skylar's clubs for hidden magic spells.</p>
+          <p class="w3-large">Yet, amidst the doubters, Skylar's focus remained unbroken. His final stroke, on the 18th green, mirrored the precision of the previous seventeen. The crowd erupted into a mix of thunderous applause and stunned silence. Skylar Fairweather, the unassuming newcomer, had achieved the impossible.</p>
+          <p class="w3-large">In the aftermath, Skylar's feat became a beacon of inspiration for dreamers and golf enthusiasts alike. Jasmine Fairway, a golf aficionado, encapsulated the sentiment by stating;
+          <h5>"In the realm of golf, there are dreamers and there are doers. This time, we witnessed a bit of both."</h5>
+          <p class="w3-large">Skylar Fairweather's journey from obscurity to golfing legend reminded the world that, sometimes, the wildest dreams unfold on the greens, and greatness is achieved not by bending the rules but by redefining them entirely.</p>
+          <p class="w3-large w3-text-blue-grey">“Aurelius Greens – Where Legends Tee Off.”</p>
+        </div>
+        <footer class="w3-center w3-light-grey w3-padding-32">
+          <div>
+            <a href="https://twitter.com/" class="w3-hover-text-blue">
+              <i class="fab fa-twitter" style="font-size: 24px;"></i>
+            </a>
+            <a href="https://instagram.com/" class="w3-hover-text-purple">
+              <i class="fab fa-instagram" style="font-size: 24px;"></i>
+            </a>
+            <a href="https://tiktok.com" class="w3-hover-text-red">
+              <i class="fab fa-tiktok" style="font-size: 24px;"></i>
+            </a>
+            <a href="https://facebook.com" class="w3-hover-text-blue">
+              <i class="fab fa-facebook" style="font-size: 24px;"></i>
+            </a>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script>
+      // Change style of navbar on scroll
+      window.onscroll = function() {
+        myFunction();
+      };
+
+      function myFunction() {
+        var navbar = document.getElementById("myNavbar");
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+          navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+        } else {
+          navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+        }
+      }
+
+      function toggleFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") === -1) {
+          x.className += " w3-show";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+    </script>
+  </body>
+</html>
